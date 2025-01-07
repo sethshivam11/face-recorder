@@ -73,14 +73,14 @@ function Recorder({ canvasRef, webcamRef }: Props) {
       <div className="flex gap-2 items-center justify-center">
         {mediaRecorder ? (
           <button
-            className="px-4 py-2 bg-stone-200 text-black rounded-xl hover:opacity-95 flex items-center justify-center gap-2"
+            className="px-4 py-2 bg-stone-800 dark:bg-stone-200 text-white dark:text-black rounded-xl hover:opacity-95 flex items-center justify-center gap-2"
             onClick={stopRecording}
           >
             <CircleStop /> Stop
           </button>
         ) : (
           <button
-            className="px-4 py-2 bg-stone-200 text-black rounded-xl hover:opacity-95 flex items-center justify-center gap-2"
+            className="px-4 py-2 bg-stone-800 dark:bg-stone-200 text-white dark:text-black rounded-xl hover:opacity-95 flex items-center justify-center gap-2"
             onClick={startRecording}
           >
             <CircleDot /> Record
@@ -92,13 +92,13 @@ function Recorder({ canvasRef, webcamRef }: Props) {
           <video ref={videoRef} className="mt-2 w-full lg:h-[720px]" controls />
           <div className="flex gap-2 items-center justify-center">
             <button
-              className="px-4 py-2 bg-stone-200 text-black rounded-xl hover:opacity-95 flex items-center justify-center gap-2"
+              className="px-4 py-2 bg-stone-800 dark:bg-stone-200 text-white dark:text-black rounded-xl hover:opacity-95 flex items-center justify-center gap-2"
               onClick={downloadRecording}
             >
               <Download /> Download
             </button>
             <button
-              className="px-4 py-2 bg-transparent hover:bg-stone-800 ring-1 ring-stone-800 text-white rounded-xl hover:opacity-95 flex items-center justify-center gap-2"
+              className="px-4 py-2 bg-transparent hover:bg-stone-200 hover:dark:bg-stone-800 ring-1 ring-stone-200 dark:ring-stone-800 dark:text-white rounded-xl hover:opacity-95 flex items-center justify-center gap-2"
               onClick={clearRecording}
             >
               <CircleX /> Clear
